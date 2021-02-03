@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background: linear-gradient(to right top, #500057, #d522e4, #9600a2);
+}
+
+main {
+  background: linear-gradient(to right top, #500057, #d522e4, #9600a2);
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* HEADER AND BUTTON */
+
+header {
+  min-height: 10vh;
+  width: 80vw;
+  flex: 1;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  color: white;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+li {
+  padding: 0.5em;
+}
+
+button {
+  padding: 0.5em;
+  transition: box-shadow 0.8s ease, transform 0.8s ease;
+  border: none;
+  color: white;
+}
+
+button:focus,
+button:hover {
+  border-bottom: 0.2em solid white;
+  border-right: 0.2em solid white;
+}
+
+button:active {
+  box-shadow: 0 0 0 rgba(255, 255, 255, 0.5), inset 0.3em 0.3em 1em rgba(255, 255, 255, 0.5);
+  transform: translate(0.6em, 0.6em);
+}
+
+button:focus {
+  outline: none;
+}
+
+/* MAIN SECTION AND THUMB */
+
+section {
+  height: 80vh;
+  width: 80vw;
+  margin-top: 1em;
+  flex: 1;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.thumb {
+  margin: 2em;
+  box-shadow: 0.2em 0.2em 0.2em 0.2em rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 2em;
+  flex: 1;
+  width: 13em;
+  height: 13em;
+  transition: box-shadow 0.8s ease, transform 0.8s ease;
+}
+
+.thumb:hover {
+  border-bottom: 0.2em solid white;
+  border-right: 0.2em solid white;
+}
+
+.thumb:active {
+  box-shadow: 0 0 0 rgba(255, 255, 255, 0.5), inset 0.3em 0.3em 1em rgba(255, 255, 255, 0.5);
+  transform: translate(0.6em, 0.6em);
+}
+
+/* GLASS AND ZOOMED IMAGE */
+.glass {
+  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.2));
+  border-radius: 2em;
+}
+
+.zoomed {
+  height: 100%;
+  width: 80%;
+  position: absolute;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+
+.zoomedImage {
+  max-width: 80%;
+  max-height: 80%;
+  margin: 2em;
+  flex: 1;
+  border-radius: 2em;
+}
+
+.notVisible {
+  display: none;
+}
